@@ -5,21 +5,21 @@ spring:
     nacos:
       server-addr: 121.41.26.81:8848 # Nacos 服务器地址
       username: nacos # Nacos 账号
-      password: Mryz@5527 # Nacos 密码
+      password: mryz176527 # Nacos 密码
       discovery: # 【配置中心】配置项
         namespace: dev # 命名空间。这里使用 dev 开发环境
         group: DEFAULT_GROUP # 使用的 Nacos 配置分组，默认为 DEFAULT_GROUP
         metadata:
           version: 1.0.0 # 服务实例的版本号，可用于灰度发布
-        server-addr: ${spring.cloud.nacos.server-addr}
-        username: ${spring.cloud.nacos.username}
-        password: ${spring.cloud.nacos.password}
+#        server-addr: ${spring.cloud.nacos.server-addr}
+#        username: ${spring.cloud.nacos.username}
+#        password: ${spring.cloud.nacos.password}
       config: # 【注册中心】配置项
         namespace: dev # 命名空间。这里使用 dev 开发环境
         group: DEFAULT_GROUP # 使用的 Nacos 配置分组，默认为 DEFAULT_GROUP
-        server-addr: ${spring.cloud.nacos.server-addr}
-        username: ${spring.cloud.nacos.username}
-        password: ${spring.cloud.nacos.password}
+#        server-addr: ${spring.cloud.nacos.server-addr}
+#        username: ${spring.cloud.nacos.username}
+#        password: ${spring.cloud.nacos.password}
 
 --- #################### 数据库相关配置 ####################
 spring:
@@ -63,7 +63,7 @@ spring:
       primary: master
       datasource:
         master:
-          url: jdbc:mysql://121.41.26.81:3306/ruoyi-vue-pro?useSSL=false&serverTimezone=Asia/Shanghai&allowPublicKeyRetrieval=true&nullCatalogMeansCurrent=true&rewriteBatchedStatements=true # MySQL Connector/J 8.X 连接的示例
+          url: jdbc:mysql://106.54.241.70:3306/ruoyi-vue-pro?useSSL=false&serverTimezone=Asia/Shanghai&allowPublicKeyRetrieval=true&nullCatalogMeansCurrent=true&rewriteBatchedStatements=true # MySQL Connector/J 8.X 连接的示例
           #          url: jdbc:mysql://127.0.0.1:3306/ruoyi-vue-pro?useSSL=true&allowPublicKeyRetrieval=true&useUnicode=true&characterEncoding=UTF-8&serverTimezone=Asia/Shanghai&rewriteBatchedStatements=true # MySQL Connector/J 5.X 连接的示例
           #          url: jdbc:postgresql://127.0.0.1:5432/ruoyi-vue-pro # PostgreSQL 连接的示例
           #          url: jdbc:oracle:thin:@127.0.0.1:1521:xe # Oracle 连接的示例
@@ -75,11 +75,11 @@ spring:
         #          password: JSm:g(*%lU4ZAkz06cd52KqT3)i1?H7W # SQL Server 连接的示例
         #          username: SYSDBA # DM 连接的示例
         #          password: SYSDBA # DM 连接的示例
-        slave: # 模拟从库，可根据自己需要修改
-          lazy: true # 开启懒加载，保证启动速度
-          url: jdbc:mysql://121.41.26.81:3306/ruoyi-vue-pro?useSSL=false&serverTimezone=Asia/Shanghai&allowPublicKeyRetrieval=true&nullCatalogMeansCurrent=true&rewriteBatchedStatements=true
-          username: ruoyi-vue-pro
-          password: fBMaNaG2sneFzaxY
+#        slave: # 模拟从库，可根据自己需要修改
+#          lazy: true # 开启懒加载，保证启动速度
+#          url: jdbc:mysql://106.54.241.70:3306/ruoyi-vue-pro?useSSL=false&serverTimezone=Asia/Shanghai&allowPublicKeyRetrieval=true&nullCatalogMeansCurrent=true&rewriteBatchedStatements=true
+#          username: ruoyi-vue-pro
+#          password: fBMaNaG2sneFzaxY
 
   # Redis 配置。Redisson 默认的配置足够使用，一般不需要进行调优
   redis:
